@@ -1,0 +1,10 @@
+Bundle-Name: employee-service-builder-api
+Bundle-SymbolicName: com.employee.training.service.builder.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.employee.training.service.builder.exception,\
+	com.employee.training.service.builder.model,\
+	com.employee.training.service.builder.service,\
+	com.employee.training.service.builder.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../employee-service-builder-service/service.xml

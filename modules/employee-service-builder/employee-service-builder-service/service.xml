@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.employee.training.service.builder">
+	<namespace>employee</namespace>
+	
+	<entity name="Employee_training" local-service="true">
+	
+		<column name="empId" primary="true" type="long"> </column>
+		<column name="firstName" type="String"> </column>
+		<column name="lastName" type="String"> </column>
+		<column name="dob" type="Date"></column>
+		
+		<column name="groupId" type="long"></column>
+		
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId"/>
+		</finder>
+		
+	</entity>
+	
+	
+	<entity local-service="true" name="Department" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="departmentId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="departName" type="String"></column>
+		
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="departName"></order-column>
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId"/>
+		</finder>
+		
+		<finder name="G_A" return-type="Collection" >
+			<finder-column name="groupId"/>
+			<finder-column name="departmentId"/>
+		</finder>
+		
+		<finder name="DepartmentId" return-type="Collection">
+			<finder-column name="departmentId"/>
+		</finder>
+		
+	</entity>
+	
+</service-builder>

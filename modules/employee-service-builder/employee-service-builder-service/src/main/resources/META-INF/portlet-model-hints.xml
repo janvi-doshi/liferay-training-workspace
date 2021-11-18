@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.employee.training.service.builder.model.Department">
+		<field name="departmentId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="departName" type="String" />
+	</model>
+	<model name="com.employee.training.service.builder.model.Employee_training">
+		<field name="empId" type="long" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="dob" type="Date" />
+		<field name="groupId" type="long" />
+	</model>
+</model-hints>
